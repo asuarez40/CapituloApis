@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite de pruebas" thread-count="2" parallel="tests">
+
+    <test name="Test GetSingleObject">
+        <classes>
+            <class name="tests.apiPublica.GetSingleObjects"></class>
+        </classes>
+    </test>
+
+    <test name="Test GetSingleObject ID7">
+        <parameter name="id" value="/7"></parameter>
+        <parameter name="expectedStatusCode" value="200"></parameter>
+        <classes>
+            <class name="tests.apiPublica.GetSingleObjects"></class>
+        </classes>
+    </test>
+
+    <test name="Test GetSingleObject ID5">
+        <parameter name="id" value="/5"></parameter>
+        <parameter name="expectedStatusCode" value="200"></parameter>
+        <classes>
+            <class name="tests.apiPublica.GetSingleObjects"></class>
+        </classes>
+    </test>
+
+    <test name="Test GetSingleObject ID50">
+        <parameter name="id" value="/50"></parameter>
+        <parameter name="expectedStatusCode" value="404"></parameter>
+        <classes>
+            <class name="tests.apiPublica.GetSingleObjects"></class>
+        </classes>
+    </test>
+
+    <test name="Test Get Objects">
+        <classes>
+            <class name="tests.apiPublica.GetObjects"></class>
+        </classes>
+    </test>
+    <test name="Test create Objects">
+        <classes>
+            <class name="tests.apiPublica.CreateObject"></class>
+        </classes>
+    </test>
+    <test name="Test Update Objects">
+        <classes>
+            <class name="tests.apiPublica.UpdateObject"></class>
+        </classes>
+    </test>
+    <test name="Test Update Partially Objects">
+        <classes>
+            <class name="tests.apiPublica.UpdatePartiallyObject"></class>
+        </classes>
+    </test>
+    <test name="Test Delete Objects">
+        <classes>
+            <class name="tests.apiPublica.DeleteObject"></class>
+        </classes>
+    </test>
+</suite>
+
